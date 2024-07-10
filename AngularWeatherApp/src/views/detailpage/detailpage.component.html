@@ -1,0 +1,21 @@
+<div class="detail-section">
+    <h1 class="detail-title">today's weather</h1>
+    @if (detailWeather){
+    <div class="detail-container">
+        <div class="today-container">
+            @for (weather of dailyWeathers; track weather){
+            <app-one-day-detail [weather]="weather"></app-one-day-detail>
+            }
+        </div>
+        <div class="remain-container">
+            @for (weather of remainingDays; track weather){
+            <app-daily-detail [weather]="weather"></app-daily-detail>
+            }
+        </div>
+    </div>
+    }
+    @else{
+    <app-loading></app-loading>
+    }
+
+</div>

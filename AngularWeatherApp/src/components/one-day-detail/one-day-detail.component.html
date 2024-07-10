@@ -1,0 +1,15 @@
+  <div class="today-main">
+    <div class="today-card">
+      <div class="sub-card-title">
+        <img [src]="clockImagePath" alt="clock" width="20">
+        {{weather?.dt_txt.slice(11).slice(0, 5)}}
+      </div>
+      <div class="today-card-header">
+        <img [src]="'https://openweathermap.org/img/wn/' + weather.weather[0].icon + '.png'"
+          [alt]="weather?.weather[0].description" />
+      </div>
+      <div class="today-card-body">
+        <div class="card-title">{{ floorValue(weather?.main.temp) }}°C</div>
+      </div>
+    </div>
+  </div>

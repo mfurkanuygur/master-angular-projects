@@ -1,0 +1,54 @@
+@if (summaryWeather && detailWeather){
+<div class="container">
+    <div class="main-summary">
+        <div class="city-summary">
+            <div class="card-title">
+                <img [src]="'https://openweathermap.org/img/wn/' + (summaryWeather?.weather[0]?.icon) + '@2x.png'"
+                    alt="">
+                <p className=''>{{summaryWeather?.weather[0].description}}</p>
+            </div>
+            <h1>{{summaryWeather?.name}}</h1>
+            <p>chance of rain: {{summaryWeather?.main?.humidity}}%</p>
+            <h1>{{ floorValue(summaryWeather?.main?.temp) }}°C</h1>
+        </div>
+        <div class="city-summary-data">
+            <div class="card">
+                <div class="sub-card">
+                    <div class="sub-card-title">
+                        <img [src]="feelslike" alt="feelslike" [width]="25" />
+                        <p>feels like</p>
+                    </div>
+                    <p> {{floorValue(summaryWeather?.main.feels_like)}}°C</p>
+                </div>
+                <div class="sub-card">
+                    <div class="sub-card-title">
+                        <img [src]="humidity" alt="humidity" [width]="20" />
+                        <p>Humidity</p>
+                    </div>
+                    <p> {{(summaryWeather?.main.humidity)}}%</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="sub-card">
+                    <div class="sub-card-title">
+                        <img [src]="mintemp" alt="mintemp" [width]="20" />
+                        <p>Min Temp</p>
+                    </div>
+                    <p> {{floorValue(summaryWeather?.main.temp_min)}}°C</p>
+                </div>
+                <div class="sub-card">
+                    <div class="sub-card-title">
+                        <img [src]="maxtemp" alt="maxtemp" [width]="20" />
+                        <p>Max Temp</p>
+                    </div>
+                    <p> {{ceilValue(summaryWeather?.main.temp_max) }}°C</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-detailpage [detailWeather]="detailWeather"></app-detailpage>
+</div>
+}
+@else{
+<app-loading></app-loading>
+}

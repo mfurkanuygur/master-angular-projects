@@ -1,0 +1,14 @@
+<div class="other-day">
+  <p>{{ dayName }}</p>
+  <div class="other-day-text">
+    <p class="text">
+      <img [src]="mintempIcon" alt="mintemp" [width]="20"/>
+      {{ floorValue(minTemp) }}°C
+    </p>
+    <span>/</span>
+    <p class="text">
+      <img [src]="maxtempIcon" alt="maxtemp" [width]="20"/>
+      {{floorValue(maxTemp)}}°C
+    </p>
+  </div>
+</div>
