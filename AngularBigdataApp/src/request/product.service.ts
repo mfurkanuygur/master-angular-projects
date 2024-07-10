@@ -9,7 +9,7 @@ import { catchError, map } from 'rxjs/operators';
 export class ProductService {
   private URL = 'https://us-east-2.aws.neurelo.com/rest/products';
   private APIKEY =
-    'neurelo_9wKFBp874Z5xFw6ZCfvhXfFXS+qEk0CNKigOZhTvsKrXiEJK9aDujgjK5TMVNC7B5beDFKhDF9bEKuCXeuAb/ulD3z4HN1DUVy0ygEdwfRsCe3g+pHL+XmJDQD8JOWa3jw0ALUJzEWYCoEJDzJj1LeNElodKD2lCqSgMx0Prbxw5mTcnDqMuxp02o6K2hJUY_lLfGmru/o7M5NSDdc/jQh0pijzEY3VG9J30d+wam0j8=';
+    'neurelo_9wKFBp874Z5xFw6ZCfvhXcbiu2z32e6f6VlioYXkSf62kyRdgtPcIVVIQZrNLN2lt0xFrVi8R4W0Xy0sclg2dhbS63EaSGBpyQYUofzj1bUbw7q0FF/9mYvN3YUNmUEtB1iGwfEjWr/K5sgaDeMd5KyERRttl/bRRXgi8KQx1oh9pBV84vf1v+3bsHh0KIhn_Y6O9Dhxjl+KWcfjNPEs4lUHwQ40wSrORa7vkCCb8rp4=';
   private allProducts = new BehaviorSubject<any[]>([]);
   constructor(private http: HttpClient) {}
 

@@ -132,6 +132,7 @@ input{
   padding: 10px;
   align-items: center;
   transition: .3s ease;
+  cursor: pointer;
 
   /* From https://css.glass */
   background: rgba(255, 255, 255);
@@ -145,20 +146,22 @@ input{
 .product-card:hover {
   transform: scale(1.05);
   box-shadow: 0px 0px 25px 18px rgba(0, 0, 0, 0.1);
-
 }
 
 .product-img>img {
   width: 250px;
+  border-radius: 8px;
   height: auto;
   max-height: 200px;
   min-height: 200px;
 }
 .product-body{
   width:100%;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
 }
 .product-title {
-  padding: 0 5px;
   text-transform: capitalize;
   color: black;
   font-size: medium;
@@ -174,6 +177,8 @@ input{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: large;
+
 }
 
 .product-price {
@@ -222,7 +227,11 @@ input{
   .desktop-header {
       display: none;
   }
-
+  .product-img>img{
+    width: auto;
+    max-height: 150px;
+    min-height: 150px;
+  }
   .mobile-header {
       display: block;
   }
